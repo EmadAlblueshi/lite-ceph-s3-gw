@@ -1,8 +1,6 @@
 ## Lite Ceph S3 Gateway Testing Container
 
-### The container image provides a convenient test environment for AWS S3 compatible REST API
-
-The **Ceph OSD object store** utilizes **memstore** as a back-end and **RADOS REST Gateway** supports both **HTTP/HTTPS** protocols.
+### A convenient test container for AWS S3 compatible REST API
 
 ### Environment Variables
 
@@ -43,11 +41,11 @@ docker run -d \
   -e SECRET_KEY="demo-secret" \
   -t emadalblueshi/lite-ceph-s3-gw:v1.0.0
 ```
-### Test (HTTP)
+#### Test (HTTP)
 ```
 curl http://localhost:7480/demo-bucket/demo-object.txt
 ```
-### Test (HTTPS)
+#### Test (HTTPS)
 ```
 curl -k https://localhost:7443/demo-bucket/demo-object.txt
 ```
